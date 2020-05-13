@@ -855,11 +855,14 @@ ARM Macro Assembler    Page 14
   432 0000001C                 END
               00000000 
               00000000 
-Command Line: --debug --xref --cpu=Cortex-M4.fp --apcs=interwork --depend=.\stm
-324xg-eval\startup_stm32f4xx.d -o.\stm324xg-eval\startup_stm32f4xx.o -IC:\Keil\
-ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\ST\STM32F4xx --prede
-fine="__MICROLIB SETA 1" --list=.\stm324xg-eval\startup_stm32f4xx.lst ..\..\..\
-..\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f4xx.s
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
+erwork --depend=.\stm324xg-eval\startup_stm32f4xx.d -o.\stm324xg-eval\startup_s
+tm32f4xx.o -I.\RTE\_STM324xG-EVAL_USBD-FS -ID:\Six\Soft\Keil_v5\ARM\PACK\Keil\S
+TM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include -ID:\Six\Soft\Kei
+l_v5\ARM\CMSIS\Include --predefine="__MICROLIB SETA 1" --predefine="__UVISION_V
+ERSION SETA 526" --predefine="STM32F407xx SETA 1" --list=.\stm324xg-eval\startu
+p_stm32f4xx.lst ..\..\..\..\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Template
+s\arm\startup_stm32f4xx.s
 
 
 
@@ -2289,4 +2292,4 @@ e\Templates\arm\startup_stm32f4xx.s
 e\Templates\arm\startup_stm32f4xx.s
 Comment: __main used once
 2 symbols
-443 symbols in table
+445 symbols in table

@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\STM324xG-EVAL\STM324xG-EVAL.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\STM324xG-EVAL\STM324xG-EVAL.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Tue Aug 29 14:26:49 2017
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Wed May 13 14:55:13 2020
 <BR><P>
 <H3>Maximum Stack Usage =        160 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -449,7 +449,7 @@ Global Symbols
 
 <P><STRONG><a name="[126]"></a>__decompress</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
 
-<P><STRONG><a name="[127]"></a>__decompress1</STRONG> (Thumb, 92 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
+<P><STRONG><a name="[127]"></a>__decompress1</STRONG> (Thumb, 86 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
 
 <P><STRONG><a name="[91]"></a>Audio_DMA_Init</STRONG> (Thumb, 164 bytes, Stack size 24 bytes, usbd_audio_core.o(i.Audio_DMA_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = Audio_DMA_Init &rArr; __2printf
@@ -466,7 +466,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[9d]"></a>Audio_Play</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, usbd_audio_core.o(i.Audio_Play))
-<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = Audio_Play &rArr; vm8731_vol_open &rArr; write_register &rArr; delay_us
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = Audio_Play &rArr; vm8731_vol_open &rArr; write_register
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2S_Cmd
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Init
@@ -588,8 +588,8 @@ Global Symbols
 
 <P><STRONG><a name="[8a]"></a>DMA_Cmd</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, stm32f4xx_dma.o(i.DMA_Cmd))
 <BR><BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Audio_Play
-<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;record_Stop
-<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;record_Start
+<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;record_Stop
+<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;record_Start
 <LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2S_DMAConfig_Rx
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Audio_DMA_Init
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AUDIO_Disable
@@ -606,7 +606,7 @@ Global Symbols
 
 <P><STRONG><a name="[bf]"></a>DMA_GetCurrDataCounter</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f4xx_dma.o(i.DMA_GetCurrDataCounter))
 <BR><BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DCD_HandleRxStatusQueueLevel_ISR
-<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait_dma_done
+<LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait_dma_done
 <LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usbd_audio_DataIn
 </UL>
 
@@ -643,10 +643,10 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM_EVAL_LEDInit
 <LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_OTG_BSP_Init
-<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key_press_Init
+<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key_press_Init
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;COM_Init
-<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm_spi_init
-<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm8731_gpio_init
+<LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm_spi_init
+<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm8731_gpio_init
 <LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2S_GPIO_Init
 </UL>
 
@@ -655,16 +655,16 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_OTG_BSP_Init
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;COM_Init
-<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm_spi_init
+<LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm_spi_init
 <LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2S_GPIO_Init
 </UL>
 
-<P><STRONG><a name="[11a]"></a>GPIO_ResetBits</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f4xx_gpio.o(i.GPIO_ResetBits))
-<BR><BR>[Called By]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_register
+<P><STRONG><a name="[119]"></a>GPIO_ResetBits</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f4xx_gpio.o(i.GPIO_ResetBits))
+<BR><BR>[Called By]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_register
 </UL>
 
 <P><STRONG><a name="[11c]"></a>GPIO_SetBits</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f4xx_gpio.o(i.GPIO_SetBits))
-<BR><BR>[Called By]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_register
+<BR><BR>[Called By]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_register
 </UL>
 
 <P><STRONG><a name="[25]"></a>HardFault_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32fxxx_it.o(i.HardFault_Handler))
@@ -672,8 +672,8 @@ Global Symbols
 </UL>
 <P><STRONG><a name="[8b]"></a>I2S_Cmd</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f4xx_spi.o(i.I2S_Cmd))
 <BR><BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Audio_Play
-<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;record_Stop
-<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;record_Start
+<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;record_Stop
+<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;record_Start
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AUDIO_Disable
 </UL>
 
@@ -686,7 +686,7 @@ Global Symbols
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_DeInit
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Cmd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;record_init
+<BR>[Called By]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;record_init
 </UL>
 
 <P><STRONG><a name="[ce]"></a>I2S_GPIO_Init</STRONG> (Thumb, 130 bytes, Stack size 16 bytes, usbd_audio_core.o(i.I2S_GPIO_Init))
@@ -717,7 +717,7 @@ Global Symbols
 <LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2S_Init
 <LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2S_GPIO_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;record_init
+<BR>[Called By]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;record_init
 </UL>
 
 <P><STRONG><a name="[90]"></a>I2S_user_Init</STRONG> (Thumb, 94 bytes, Stack size 32 bytes, usbd_audio_core.o(i.I2S_user_Init))
@@ -738,7 +738,7 @@ Global Symbols
 <P><STRONG><a name="[24]"></a>NMI_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32fxxx_it.o(i.NMI_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f4xx.o(RESET)
 </UL>
-<P><STRONG><a name="[9b]"></a>NVIC_Init</STRONG> (Thumb, 108 bytes, Stack size 16 bytes, misc.o(i.NVIC_Init))
+<P><STRONG><a name="[9b]"></a>NVIC_Init</STRONG> (Thumb, 106 bytes, Stack size 16 bytes, misc.o(i.NVIC_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = NVIC_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_OTG_BSP_EnableInterrupt
@@ -750,7 +750,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[70]"></a>OTG_FS_IRQHandler</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, stm32fxxx_it.o(i.OTG_FS_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = OTG_FS_IRQHandler &rArr; USBD_OTG_ISR_Handler &rArr; DCD_HandleRxStatusQueueLevel_ISR &rArr; Audio_Play &rArr; vm8731_vol_open &rArr; write_register &rArr; delay_us
+<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = OTG_FS_IRQHandler &rArr; USBD_OTG_ISR_Handler &rArr; DCD_HandleRxStatusQueueLevel_ISR &rArr; Audio_Play &rArr; vm8731_vol_open &rArr; write_register
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_OTG_ISR_Handler
 </UL>
@@ -771,10 +771,10 @@ Global Symbols
 <P><STRONG><a name="[98]"></a>RCC_AHB1PeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f4xx_rcc.o(i.RCC_AHB1PeriphClockCmd))
 <BR><BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM_EVAL_LEDInit
 <LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_OTG_BSP_Init
-<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key_press_Init
+<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key_press_Init
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;COM_Init
-<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm_spi_init
-<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm8731_gpio_init
+<LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm_spi_init
+<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm8731_gpio_init
 <LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2S_GPIO_Init
 <LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2S_DMAConfig_Rx
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Audio_DMA_Init
@@ -796,7 +796,7 @@ Global Symbols
 
 <P><STRONG><a name="[ff]"></a>RCC_APB2PeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f4xx_rcc.o(i.RCC_APB2PeriphClockCmd))
 <BR><BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_OTG_BSP_Init
-<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm_spi_init
+<LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm_spi_init
 </UL>
 
 <P><STRONG><a name="[d4]"></a>RCC_APB2PeriphResetCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f4xx_rcc.o(i.RCC_APB2PeriphResetCmd))
@@ -809,17 +809,17 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Init
 </UL>
 
-<P><STRONG><a name="[11b]"></a>SPI1_RW_16bit</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, usbd_audio_core.o(i.SPI1_RW_16bit))
-<BR><BR>[Called By]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_register
+<P><STRONG><a name="[11b]"></a>SPI1_RW_16bit</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, usbd_audio_core.o(i.SPI1_RW_16bit))
+<BR><BR>[Called By]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_register
 </UL>
 
-<P><STRONG><a name="[119]"></a>SPI_Cmd</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f4xx_spi.o(i.SPI_Cmd))
-<BR><BR>[Called By]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm_spi_init
+<P><STRONG><a name="[118]"></a>SPI_Cmd</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f4xx_spi.o(i.SPI_Cmd))
+<BR><BR>[Called By]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm_spi_init
 </UL>
 
 <P><STRONG><a name="[9c]"></a>SPI_I2S_DMACmd</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f4xx_spi.o(i.SPI_I2S_DMACmd))
-<BR><BR>[Called By]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;record_Stop
-<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;record_Start
+<BR><BR>[Called By]<UL><LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;record_Stop
+<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;record_Start
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Audio_DMA_Init
 </UL>
 
@@ -829,15 +829,15 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphResetCmd
 <LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB1PeriphResetCmd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm_spi_init
+<BR>[Called By]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm_spi_init
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2S_user_Init
 <LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2S_RXConfig
 </UL>
 
-<P><STRONG><a name="[118]"></a>SPI_Init</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, stm32f4xx_spi.o(i.SPI_Init))
+<P><STRONG><a name="[117]"></a>SPI_Init</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, stm32f4xx_spi.o(i.SPI_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SPI_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm_spi_init
+<BR>[Called By]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm_spi_init
 </UL>
 
 <P><STRONG><a name="[d6]"></a>STM_EVAL_LEDInit</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, stm324xg_eval.o(i.STM_EVAL_LEDInit))
@@ -849,14 +849,14 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_USR_Init
 </UL>
 
-<P><STRONG><a name="[10d]"></a>STM_EVAL_LEDToggle</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm324xg_eval.o(i.STM_EVAL_LEDToggle))
+<P><STRONG><a name="[10b]"></a>STM_EVAL_LEDToggle</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm324xg_eval.o(i.STM_EVAL_LEDToggle))
 <BR><BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[29]"></a>SVC_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32fxxx_it.o(i.SVC_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f4xx.o(RESET)
 </UL>
-<P><STRONG><a name="[2c]"></a>SysTick_Handler</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, stm32fxxx_it.o(i.SysTick_Handler))
+<P><STRONG><a name="[2c]"></a>SysTick_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32fxxx_it.o(i.SysTick_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f4xx.o(RESET)
 </UL>
 <P><STRONG><a name="[80]"></a>SystemInit</STRONG> (Thumb, 88 bytes, Stack size 8 bytes, system_stm32f4xx.o(i.SystemInit))
@@ -884,7 +884,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;COM_Init
 </UL>
 
-<P><STRONG><a name="[da]"></a>USART_SendByte</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, app.o(i.USART_SendByte))
+<P><STRONG><a name="[da]"></a>USART_SendByte</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, app.o(i.USART_SendByte))
 <BR><BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fputc
 <LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_SendStr
 </UL>
@@ -934,7 +934,7 @@ Global Symbols
 <LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_GetDescriptor
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_GetConfig
 <LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_ClrFeature
-<LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usb_set_sample
+<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usb_set_sample
 <LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usbd_audio_Setup
 </UL>
 
@@ -943,7 +943,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DCD_EP_PrepareRx
 </UL>
-<BR>[Called By]<UL><LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usb_set_sample
+<BR>[Called By]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usb_set_sample
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AUDIO_Req_SetCurrent
 </UL>
 
@@ -965,7 +965,7 @@ Global Symbols
 <LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_GetStatus
 <LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_GetDescriptor
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_GetConfig
-<LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usb_set_sample
+<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usb_set_sample
 <LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usbd_audio_Setup
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AUDIO_Req_GetCurrent
 </UL>
@@ -1013,7 +1013,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[d2]"></a>USBD_OTG_ISR_Handler</STRONG> (Thumb, 256 bytes, Stack size 24 bytes, usb_dcd_int.o(i.USBD_OTG_ISR_Handler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = USBD_OTG_ISR_Handler &rArr; DCD_HandleRxStatusQueueLevel_ISR &rArr; Audio_Play &rArr; vm8731_vol_open &rArr; write_register &rArr; delay_us
+<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = USBD_OTG_ISR_Handler &rArr; DCD_HandleRxStatusQueueLevel_ISR &rArr; Audio_Play &rArr; vm8731_vol_open &rArr; write_register
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_OTG_ReadCoreItr
 <LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_OTG_IsDeviceMode
@@ -1260,7 +1260,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DCD_EP_Stall
 </UL>
 
-<P><STRONG><a name="[af]"></a>USB_OTG_EPStartXfer</STRONG> (Thumb, 506 bytes, Stack size 32 bytes, usb_core.o(i.USB_OTG_EPStartXfer))
+<P><STRONG><a name="[af]"></a>USB_OTG_EPStartXfer</STRONG> (Thumb, 502 bytes, Stack size 32 bytes, usb_core.o(i.USB_OTG_EPStartXfer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = USB_OTG_EPStartXfer &rArr; USB_OTG_WritePacket
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_OTG_WritePacket
@@ -1393,9 +1393,9 @@ Global Symbols
 <LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_SetFeature
 <LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_ClrFeature
 <LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2S_Init
-<LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm_8731_record_init
+<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm_8731_record_init
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm_8731_init
-<LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usb_set_sample
+<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usb_set_sample
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2S_user_Init
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Audio_DMA_Init
 <LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usbd_audio_Setup
@@ -1409,20 +1409,13 @@ Global Symbols
 
 <P><STRONG><a name="[12b]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
-<P><STRONG><a name="[10a]"></a>delay_ms</STRONG> (Thumb, 24 bytes, Stack size 12 bytes, delay.o(i.delay_ms))
-<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = delay_ms &rArr; delay_us
-</UL>
-<BR>[Calls]<UL><LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_us
-</UL>
-<BR>[Called By]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm_8731_record_init
+<P><STRONG><a name="[116]"></a>delay_ms</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, delay.o(i.delay_ms))
+<BR><BR>[Called By]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm_8731_record_init
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm_8731_init
 </UL>
 
-<P><STRONG><a name="[10b]"></a>delay_us</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, delay.o(i.delay_us))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = delay_us
-</UL>
-<BR>[Called By]<UL><LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
-<LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_register
+<P><STRONG><a name="[11a]"></a>delay_us</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, delay.o(i.delay_us))
+<BR><BR>[Called By]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_register
 </UL>
 
 <P><STRONG><a name="[82]"></a>fputc</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, app.o(i.fputc))
@@ -1432,7 +1425,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> printf5.o(i.__0printf$5)
 </UL>
-<P><STRONG><a name="[10c]"></a>key_press_Init</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, app.o(i.key_press_Init))
+<P><STRONG><a name="[10a]"></a>key_press_Init</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, app.o(i.key_press_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = key_press_Init &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB1PeriphClockCmd
@@ -1445,21 +1438,21 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = main &rArr; USBD_Init &rArr; DCD_Init &rArr; USB_OTG_CoreInitDev &rArr; USB_OTG_FlushTxFifo &rArr; USB_OTG_BSP_uDelay
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_Init
-<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM_EVAL_LEDToggle
-<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key_press_Init
+<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM_EVAL_LEDToggle
+<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key_press_Init
 <LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_SendStr
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;COM_Init
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[113]"></a>mem_cpy_s</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, usbd_audio_core.o(i.mem_cpy_s))
+<P><STRONG><a name="[111]"></a>mem_cpy_s</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, usbd_audio_core.o(i.mem_cpy_s))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = mem_cpy_s
 </UL>
 <BR>[Called By]<UL><LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usbd_audio_DataIn
 </UL>
 
-<P><STRONG><a name="[10e]"></a>record_Start</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, usbd_audio_core.o(i.record_Start))
+<P><STRONG><a name="[10c]"></a>record_Start</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, usbd_audio_core.o(i.record_Start))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = record_Start
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_I2S_DMACmd
@@ -1469,7 +1462,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usbd_audio_Setup
 </UL>
 
-<P><STRONG><a name="[10f]"></a>record_Stop</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, usbd_audio_core.o(i.record_Stop))
+<P><STRONG><a name="[10d]"></a>record_Stop</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, usbd_audio_core.o(i.record_Stop))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = record_Stop
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_I2S_DMACmd
@@ -1479,17 +1472,17 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usbd_audio_Setup
 </UL>
 
-<P><STRONG><a name="[110]"></a>record_init</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, usbd_audio_core.o(i.record_init))
+<P><STRONG><a name="[10e]"></a>record_init</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, usbd_audio_core.o(i.record_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = record_init &rArr; I2S_RXConfig &rArr; I2S_Init &rArr; __2printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm_8731_record_init
+<BR>[Calls]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm_8731_record_init
 <LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2S_RXConfig
 <LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2S_DMAConfig_Rx
 </UL>
 <BR>[Called By]<UL><LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usbd_audio_Setup
 </UL>
 
-<P><STRONG><a name="[112]"></a>usb_set_sample</STRONG> (Thumb, 118 bytes, Stack size 16 bytes, usbd_audio_core.o(i.usb_set_sample))
+<P><STRONG><a name="[110]"></a>usb_set_sample</STRONG> (Thumb, 118 bytes, Stack size 16 bytes, usbd_audio_core.o(i.usb_set_sample))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = usb_set_sample &rArr; USBD_CtlSendData &rArr; DCD_EP_Tx &rArr; USB_OTG_EPStartXfer &rArr; USB_OTG_WritePacket
 </UL>
 <BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_CtlSendData
@@ -1504,14 +1497,14 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> usbd_audio_core.o(.data)
 </UL>
 <P><STRONG><a name="[9e]"></a>vm8731_vol_open</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, usbd_audio_core.o(i.vm8731_vol_open))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = vm8731_vol_open &rArr; write_register &rArr; delay_us
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = vm8731_vol_open &rArr; write_register
 </UL>
-<BR>[Calls]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_register
+<BR>[Calls]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_register
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Audio_Play
 </UL>
 
-<P><STRONG><a name="[114]"></a>wait_dma_done</STRONG> (Thumb, 70 bytes, Stack size 24 bytes, usbd_audio_core.o(i.wait_dma_done))
+<P><STRONG><a name="[112]"></a>wait_dma_done</STRONG> (Thumb, 70 bytes, Stack size 24 bytes, usbd_audio_core.o(i.wait_dma_done))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = wait_dma_done
 </UL>
 <BR>[Calls]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_GetCurrDataCounter
@@ -1520,71 +1513,71 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[8c]"></a>wm8731_disable</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, usbd_audio_core.o(i.wm8731_disable))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = wm8731_disable &rArr; write_register &rArr; delay_us
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = wm8731_disable &rArr; write_register
 </UL>
-<BR>[Calls]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_register
+<BR>[Calls]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_register
 </UL>
 <BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AUDIO_Disable
 </UL>
 
-<P><STRONG><a name="[116]"></a>wm8731_gpio_init</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, usbd_audio_core.o(i.wm8731_gpio_init))
+<P><STRONG><a name="[114]"></a>wm8731_gpio_init</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, usbd_audio_core.o(i.wm8731_gpio_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = wm8731_gpio_init &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB1PeriphClockCmd
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm_8731_record_init
+<BR>[Called By]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm_8731_record_init
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm_8731_init
 </UL>
 
-<P><STRONG><a name="[92]"></a>wm_8731_init</STRONG> (Thumb, 224 bytes, Stack size 24 bytes, usbd_audio_core.o(i.wm_8731_init))
+<P><STRONG><a name="[92]"></a>wm_8731_init</STRONG> (Thumb, 222 bytes, Stack size 24 bytes, usbd_audio_core.o(i.wm_8731_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = wm_8731_init &rArr; wm_spi_init &rArr; GPIO_PinAFConfig
 </UL>
-<BR>[Calls]<UL><LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
-<LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_register
-<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm_spi_init
-<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm8731_gpio_init
+<BR>[Calls]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
+<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_register
+<LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm_spi_init
+<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm8731_gpio_init
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AUDIO_Init
 </UL>
 
-<P><STRONG><a name="[111]"></a>wm_8731_record_init</STRONG> (Thumb, 208 bytes, Stack size 24 bytes, usbd_audio_core.o(i.wm_8731_record_init))
+<P><STRONG><a name="[10f]"></a>wm_8731_record_init</STRONG> (Thumb, 206 bytes, Stack size 24 bytes, usbd_audio_core.o(i.wm_8731_record_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = wm_8731_record_init &rArr; wm_spi_init &rArr; GPIO_PinAFConfig
 </UL>
-<BR>[Calls]<UL><LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
-<LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_register
-<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm_spi_init
-<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm8731_gpio_init
+<BR>[Calls]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
+<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_register
+<LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm_spi_init
+<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm8731_gpio_init
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;record_init
+<BR>[Called By]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;record_init
 </UL>
 
-<P><STRONG><a name="[117]"></a>wm_spi_init</STRONG> (Thumb, 168 bytes, Stack size 32 bytes, usbd_audio_core.o(i.wm_spi_init))
+<P><STRONG><a name="[115]"></a>wm_spi_init</STRONG> (Thumb, 168 bytes, Stack size 32 bytes, usbd_audio_core.o(i.wm_spi_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = wm_spi_init &rArr; GPIO_PinAFConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB1PeriphClockCmd
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinAFConfig
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
-<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_Init
+<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_Init
 <LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_I2S_DeInit
-<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_Cmd
+<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_Cmd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm_8731_record_init
+<BR>[Called By]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm_8731_record_init
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm_8731_init
 </UL>
 
-<P><STRONG><a name="[115]"></a>write_register</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, usbd_audio_core.o(i.write_register))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = write_register &rArr; delay_us
+<P><STRONG><a name="[113]"></a>write_register</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, usbd_audio_core.o(i.write_register))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = write_register
 </UL>
-<BR>[Calls]<UL><LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_us
+<BR>[Calls]<UL><LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_us
 <LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
-<LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
+<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
 <LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_RW_16bit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm_8731_record_init
+<BR>[Called By]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm_8731_record_init
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm_8731_init
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wm8731_disable
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vm8731_vol_open
@@ -1602,7 +1595,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_OTG_ISR_Handler
 </UL>
 
-<P><STRONG><a name="[b6]"></a>DCD_HandleInEP_ISR</STRONG> (Thumb, 318 bytes, Stack size 24 bytes, usb_dcd_int.o(i.DCD_HandleInEP_ISR))
+<P><STRONG><a name="[b6]"></a>DCD_HandleInEP_ISR</STRONG> (Thumb, 320 bytes, Stack size 24 bytes, usb_dcd_int.o(i.DCD_HandleInEP_ISR))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = DCD_HandleInEP_ISR &rArr; DCD_WriteEmptyTxFifo &rArr; USB_OTG_WritePacket
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_OTG_ReadDevAllInEPItr
@@ -1613,7 +1606,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_OTG_ISR_Handler
 </UL>
 
-<P><STRONG><a name="[bb]"></a>DCD_HandleOutEP_ISR</STRONG> (Thumb, 250 bytes, Stack size 24 bytes, usb_dcd_int.o(i.DCD_HandleOutEP_ISR))
+<P><STRONG><a name="[bb]"></a>DCD_HandleOutEP_ISR</STRONG> (Thumb, 252 bytes, Stack size 24 bytes, usb_dcd_int.o(i.DCD_HandleOutEP_ISR))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = DCD_HandleOutEP_ISR &rArr; USB_OTG_EP0_OutStart
 </UL>
 <BR>[Calls]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_OTG_ReadDevOutEP_itr
@@ -1630,7 +1623,7 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[be]"></a>DCD_HandleRxStatusQueueLevel_ISR</STRONG> (Thumb, 528 bytes, Stack size 40 bytes, usb_dcd_int.o(i.DCD_HandleRxStatusQueueLevel_ISR))
-<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = DCD_HandleRxStatusQueueLevel_ISR &rArr; Audio_Play &rArr; vm8731_vol_open &rArr; write_register &rArr; delay_us
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = DCD_HandleRxStatusQueueLevel_ISR &rArr; Audio_Play &rArr; vm8731_vol_open &rArr; write_register
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_OTG_ReadPacket
 <LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_GetCurrDataCounter
@@ -1698,7 +1691,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DCD_HandleInEP_ISR
 </UL>
 
-<P><STRONG><a name="[103]"></a>USB_OTG_CoreReset</STRONG> (Thumb, 104 bytes, Stack size 24 bytes, usb_core.o(i.USB_OTG_CoreReset))
+<P><STRONG><a name="[103]"></a>USB_OTG_CoreReset</STRONG> (Thumb, 108 bytes, Stack size 24 bytes, usb_core.o(i.USB_OTG_CoreReset))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = USB_OTG_CoreReset &rArr; USB_OTG_BSP_uDelay
 </UL>
 <BR>[Calls]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_OTG_BSP_uDelay
@@ -1712,7 +1705,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_OTG_EnableDevInt
 </UL>
 
-<P><STRONG><a name="[89]"></a>AUDIO_Disable</STRONG> (Thumb, 70 bytes, Stack size 8 bytes, usbd_audio_core.o(i.AUDIO_Disable))
+<P><STRONG><a name="[89]"></a>AUDIO_Disable</STRONG> (Thumb, 80 bytes, Stack size 8 bytes, usbd_audio_core.o(i.AUDIO_Disable))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = AUDIO_Disable &rArr; DCD_EP_PrepareRx &rArr; USB_OTG_EPStartXfer &rArr; USB_OTG_WritePacket
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2S_Cmd
@@ -1757,7 +1750,7 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = usbd_audio_DataIn &rArr; DCD_EP_Tx &rArr; USB_OTG_EPStartXfer &rArr; USB_OTG_WritePacket
 </UL>
 <BR>[Calls]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_GetCurrDataCounter
-<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mem_cpy_s
+<LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mem_cpy_s
 <LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DCD_EP_Tx
 <LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DCD_EP_Flush
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
@@ -1806,16 +1799,16 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> usbd_audio_core.o(.data)
 </UL>
-<P><STRONG><a name="[10]"></a>usbd_audio_Setup</STRONG> (Thumb, 384 bytes, Stack size 32 bytes, usbd_audio_core.o(i.usbd_audio_Setup))
+<P><STRONG><a name="[10]"></a>usbd_audio_Setup</STRONG> (Thumb, 386 bytes, Stack size 32 bytes, usbd_audio_core.o(i.usbd_audio_Setup))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = usbd_audio_Setup &rArr; usb_set_sample &rArr; USBD_CtlSendData &rArr; DCD_EP_Tx &rArr; USB_OTG_EPStartXfer &rArr; USB_OTG_WritePacket
 </UL>
 <BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_CtlSendData
 <LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_CtlError
-<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait_dma_done
-<LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usb_set_sample
-<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;record_init
-<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;record_Stop
-<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;record_Start
+<LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait_dma_done
+<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usb_set_sample
+<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;record_init
+<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;record_Stop
+<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;record_Start
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AUDIO_Req_SetCurrent
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AUDIO_Req_GetCurrent
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AUDIO_Disable
@@ -1968,7 +1961,7 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> usbd_core.o(.data)
 </UL>
-<P><STRONG><a name="[d7]"></a>SetSysClock</STRONG> (Thumb, 266 bytes, Stack size 12 bytes, system_stm32f4xx.o(i.SetSysClock))
+<P><STRONG><a name="[d7]"></a>SetSysClock</STRONG> (Thumb, 270 bytes, Stack size 12 bytes, system_stm32f4xx.o(i.SetSysClock))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = SetSysClock
 </UL>
 <BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInit

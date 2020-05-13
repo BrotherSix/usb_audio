@@ -107,7 +107,7 @@ void COM_Init(uint32_t BaudRate)
   	GPIO_Init(GPIOA, &GPIO_InitStructure);    
 
 	
-  	USART_InitStructure.USART_BaudRate = BaudRate;//²¨ÌØÂÊÉèÖÃ
+  	USART_InitStructure.USART_BaudRate = BaudRate;//æ³¢ç‰¹çŽ‡è®¾ç½®
   	USART_InitStructure.USART_WordLength = USART_WordLength_8b;
   	USART_InitStructure.USART_StopBits = USART_StopBits_1;
   	USART_InitStructure.USART_Parity = USART_Parity_No;

@@ -198,8 +198,8 @@ void SysTick_Handler(void)
   }
   #endif
 
-  extern u32 ntime;
-  ntime--;
+//  extern u32 ntime;
+//  ntime--;
 }
 
 /**
